@@ -1,0 +1,104 @@
+#!/bin/sh
+
+#-------- airsonic start-stop-status script --------
+#-------- package maintained @ https://github.com/ghenry22/airsonic-synology --------
+
+####################################################
+#function to get the process id of airsonic
+PID=""
+airsonic_get_pid ()
+{
+	PID=`ps -ax | grep java | grep airsonic | head -n 1 | awk '{print $1}'`
+	#echo "$(date +%d.%m.%y_%H:%M:%S): looking for PID" >> ${SYNOPKG_PKGDEST}/airsonic_package.log
+}
+get_time()
+{
+	TIME=$(date +%d.%m.%y_%H:%M:%S)
+}
+
+case "$1" in
+   start)
+	  ###---copied from patters start-stop-status.sh of his crashplan proe package---
+	  DAEMON_ID="${SYNOPKG_PKGNAME} daemon user"
+	  DAEMON_HOME="`cat /etc/passwd | grep "${DAEMON_ID}" | cut -f6 -d':'`"
+    
+	  #set the current timezone for Java so that log timestamps are accurate
+	  #we need to use the modern timezone names so that Java can figure out DST 
+	  SYNO_TZ=`cat /etc/synoinfo.conf | grep timezone | cut -f2 -d'"'`
+	  SYNO_TZ=`grep "^${SYNO_TZ}" /usr/share/zoneinfo/Timezone/tzname | sed -e "s/^.*= //"`
+	  grep "^export TZ" ${DAEMON_HOME}/.profile > /dev/null \
+	  && sed -i "s%^export TZ=.*$%export TZ='${SYNO_TZ}'%" ${DAEMON_HOME}/.profile \
+	  ###---end of copy---------------------------------------------------------------
+	  
+	  #set up symlinks for the DSM GUI icon
+	  #airsonic main
+	  if [ -d /usr/syno/synoman/webman/3rdparty ]; then
+		ln -s ${SYNOPKG_PKGDEST}/ /usr/syno/synoman/webman/3rdparty/airsonic
+		echo "$(date +%d.%m.%y_%H:%M:%S): airsonic DSM link created" >> ${SYNOPKG_PKGDEST}/airsonic_package.log
+	  else 
+		echo "$(date +%d.%m.%y_%H:%M:%S) : Error: Directory for airsonic DSM link was not found" >> ${SYNOPKG_PKGDEST}/airsonic_package.log
+	  fi
+      #create custom temp folder so temp files can be bigger 
+	  if [ ! -d ${SYNOPKG_PKGDEST}/../../@tmp/airsonic ]; then
+		mkdir ${SYNOPKG_PKGDEST}/../../@tmp/airsonic
+		chown -R airsonic ${SYNOPKG_PKGDEST}/../../@tmp/airsonic
+		echo "$(date +%d.%m.%y_%H:%M:%S): Temp directory created" >> ${SYNOPKG_PKGDEST}/airsonic_package.log
+	  fi
+	  #create symlink to the created directory
+	  if [ ! -L /tmp/airsonic ]; then
+		ln -s ${SYNOPKG_PKGDEST}/../../@tmp/airsonic /tmp/
+		echo "$(date +%d.%m.%y_%H:%M:%S): Temp directory link created" >> ${SYNOPKG_PKGDEST}/airsonic_package.log
+	  fi
+	  # starting airsonic as airsonic daemon user
+	  echo "$(date +%d.%m.%y_%H:%M:%S): starting airsonic as airsonic daemon user" >> ${SYNOPKG_PKGDEST}/airsonic_package.log
+      su - airsonic -s /bin/sh -c /usr/syno/synoman/webman/3rdparty/airsonic/airsonic.sh
+      sleep 10
+	  echo "$(date +%d.%m.%y_%H:%M:%S): started airsonic as airsonic daemon user" >> ${SYNOPKG_PKGDEST}/airsonic_package.log
+	  airsonic_get_pid
+	  if [ ! -z $PID ]; then
+		echo "$(date +%d.%m.%y_%H:%M:%S): started airsonic successfully. PID is: $PID" >> ${SYNOPKG_PKGDEST}/airsonic_package.log
+		echo "$(date +%d.%m.%y_%H:%M:%S): ----airsonic is running----" >> ${SYNOPKG_PKGDEST}/airsonic_package.log
+	  else
+		echo "$(date +%d.%m.%y_%H:%M:%S): Error: Can not start airsonic" >> ${SYNOPKG_PKGDEST}/airsonic_package.log
+		exit 1
+	  fi
+	   
+	  exit 0
+   ;;
+   stop)
+      #stop airsonic
+	  airsonic_get_pid
+      kill $PID
+	  echo "$(date +%d.%m.%y_%H:%M:%S) : killed airsonic PID: $PID" >> ${SYNOPKG_PKGDEST}/airsonic_package.log
+      sleep 2 
+	  #delete Symlinks and DSM icon
+	  if [ -L /usr/syno/synoman/webman/3rdparty/airsonic ]; then
+		rm /usr/syno/synoman/webman/3rdparty/airsonic
+		echo "$(date +%d.%m.%y_%H:%M:%S): airsonic DSM link deleted" >> ${SYNOPKG_PKGDEST}/airsonic_package.log
+	  fi
+	  if [ -d ${SYNOPKG_PKGDEST}/../../@tmp/airsonic ]; then
+		rm -r ${SYNOPKG_PKGDEST}/../../@tmp/airsonic
+		echo "$(date +%d.%m.%y_%H:%M:%S): Temp files deleted" >> ${SYNOPKG_PKGDEST}/airsonic_package.log
+	  fi
+	  if [ -L /tmp/airsonic ]; then
+		rm /tmp/airsonic
+		echo "$(date +%d.%m.%y_%H:%M:%S): Temp link deleted" >> ${SYNOPKG_PKGDEST}/airsonic_package.log
+	  fi
+	  echo "$(date +%d.%m.%y_%H:%M:%S): ----airsonic is stopped----" >> ${SYNOPKG_PKGDEST}/airsonic_package.log
+	  exit 0
+   ;;
+   status)
+      airsonic_get_pid
+      if [ -z  $PID ]; then
+	  #airsonic is not running
+		exit 1
+	  else
+	  #airsonic is running
+		exit 0
+      fi
+   ;;
+   log)
+	  echo "${SYNOPKG_PKGDEST}/airsonic_package.log"
+	  exit 0
+   ;;
+esac

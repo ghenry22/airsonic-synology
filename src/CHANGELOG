@@ -1,0 +1,5 @@
+#--------airsonic SPK changelog
+#--------package maintained at https://github.com/ghenry22/airsonic-synology
+#--------This log only shows the changes of the spk versions. 
+
+1.0.1062 - First release for airsonic with airsonic server 10.6.2
