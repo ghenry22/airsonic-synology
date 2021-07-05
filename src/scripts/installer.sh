@@ -99,7 +99,6 @@ postinst ()
     ##start airsonic
     #fix file permissions
     chmod +x ${SYNOPKG_PKGDEST}/airsonic.sh
-    chmod 775 ${SYNOPKG_PKGDEST}/airsonic-booter-jar-with-dependencies.jar
     chmod 775 ${SYNOPKG_PKGDEST}/airsonic.war
     chown -R airsonic:users ${SYNOPKG_PKGDEST}
     echo "$(date +%d.%m.%y_%H:%M:%S): start airsonic for first initialisation" >> ${SYNOPKG_PKGDEST}/airsonic_package.log
