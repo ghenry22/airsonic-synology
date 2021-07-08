@@ -1,0 +1,361 @@
+Script started on Wed Jul  7 14:42:14 2021
+[1m[7m%[27m[1m[0m                                                                                                                                                                              [0m[27m[24m[Jghenry@Gavens-MacBook-Pro-2 airsonic-synology % [K[?2004hlls -lah[?2004l
+total 40
+drwxr-xr-x  10 ghenry  staff   320B Jul  7 14:42 .
+drwxr-xr-x@ 13 ghenry  staff   416B Jul  5 11:02 ..
+-rw-r--r--@  1 ghenry  staff   6.0K Jul  5 14:28 .DS_Store
+drwxr-xr-x  16 ghenry  staff   512B Jul  5 14:40 .git
+-rw-r--r--   1 ghenry  staff   349B Jul  5 11:04 .gitignore
+-rw-r--r--   1 ghenry  staff   1.4K Jul  5 14:26 README.md
+drwxr-xr-x   4 ghenry  staff   128B Jul  7 14:42 build
+drwxr-xr-x   3 ghenry  staff    96B Jul  5 14:28 scripts
+drwxr-xr-x  10 ghenry  staff   320B Jul  5 11:05 src
+-rw-r--r--   1 ghenry  staff    43B Jul  7 14:42 typescript
+[1m[7m%[27m[1m[0m                                                                                                                                                                              [0m[27m[24m[Jghenry@Gavens-MacBook-Pro-2 airsonic-synology % [K[?2004hppwd[?2004l
+/Users/ghenry/Documents/GitHub/airsonic-synology
+[1m[7m%[27m[1m[0m                                                                                                                                                                              [0m[27m[24m[Jghenry@Gavens-MacBook-Pro-2 airsonic-synology % [K[?2004hccd scripts[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                              [0m[27m[24m[Jghenry@Gavens-MacBook-Pro-2 scripts % [K[?2004hlls[?2004l
+build.sh
+[1m[7m%[27m[1m[0m                                                                                                                                                                              [0m[27m[24m[Jghenry@Gavens-MacBook-Pro-2 scripts % [K[?2004h../build.sh[1m [0m[0m [?2004l
+../src/CHANGELOG -> ../build/buildtemp/CHANGELOG
+../src/INFO -> ../build/buildtemp/INFO
+../src/PACKAGE_ICON.PNG -> ../build/buildtemp/PACKAGE_ICON.PNG
+../src/PACKAGE_ICON_120.PNG -> ../build/buildtemp/PACKAGE_ICON_120.PNG
+../src/PACKAGE_ICON_256.PNG -> ../build/buildtemp/PACKAGE_ICON_256.PNG
+../src/airsonic.sh -> ../build/buildtemp/airsonic.sh
+../src/package -> ../build/buildtemp/package
+../src/package/airsonic.sh -> ../build/buildtemp/package/airsonic.sh
+../src/package/passgen -> ../build/buildtemp/package/passgen
+../src/package/config -> ../build/buildtemp/package/config
+../src/package/images -> ../build/buildtemp/package/images
+../src/package/images/airsonic-24.png -> ../build/buildtemp/package/images/airsonic-24.png
+../src/package/images/airsonic-32.png -> ../build/buildtemp/package/images/airsonic-32.png
+../src/package/images/airsonic-48.png -> ../build/buildtemp/package/images/airsonic-48.png
+../src/package/images/airsonic-72.png -> ../build/buildtemp/package/images/airsonic-72.png
+../src/package/images/airsonic-16.png -> ../build/buildtemp/package/images/airsonic-16.png
+../src/package/airsonic.war -> ../build/buildtemp/package/airsonic.war
+../src/package/README.TXT -> ../build/buildtemp/package/README.TXT
+../src/package/version.txt -> ../build/buildtemp/package/version.txt
+../src/scripts -> ../build/buildtemp/scripts
+../src/scripts/installer.sh -> ../build/buildtemp/scripts/installer.sh
+../src/scripts/postupgrade -> ../build/buildtemp/scripts/postupgrade
+../src/scripts/preupgrade -> ../build/buildtemp/scripts/preupgrade
+../src/scripts/postuninst -> ../build/buildtemp/scripts/postuninst
+../src/scripts/preinst -> ../build/buildtemp/scripts/preinst
+../src/scripts/postinst -> ../build/buildtemp/scripts/postinst
+../src/scripts/preuninst -> ../build/buildtemp/scripts/preuninst
+../src/scripts/start-stop-status -> ../build/buildtemp/scripts/start-stop-status
+a README.TXT
+a airsonic.sh
+a airsonic.war
+a config
+a images
+a images/airsonic-24.png
+a images/airsonic-32.png
+a images/airsonic-48.png
+a images/airsonic-72.png
+a images/airsonic-16.png
+a passgen
+a version.txt
+a CHANGELOG
+a INFO
+a PACKAGE_ICON.PNG
+a PACKAGE_ICON_120.PNG
+a PACKAGE_ICON_256.PNG
+a airsonic.sh
+a package.tgz
+a scripts
+a scripts/installer.sh
+a scripts/postupgrade
+a scripts/preupgrade
+a scripts/postuninst
+a scripts/preinst
+a scripts/postinst
+a scripts/preuninst
+a scripts/start-stop-status
+[1m[7m%[27m[1m[0m                                                                                                                                                                              [0m[27m[24m[Jghenry@Gavens-MacBook-Pro-2 scripts % [K[?2004h./build.sh[?2004l
+../src/CHANGELOG -> ../build/buildtemp/CHANGELOG
+../src/INFO -> ../build/buildtemp/INFO
+../src/PACKAGE_ICON.PNG -> ../build/buildtemp/PACKAGE_ICON.PNG
+../src/PACKAGE_ICON_120.PNG -> ../build/buildtemp/PACKAGE_ICON_120.PNG
+../src/PACKAGE_ICON_256.PNG -> ../build/buildtemp/PACKAGE_ICON_256.PNG
+../src/airsonic.sh -> ../build/buildtemp/airsonic.sh
+../src/package -> ../build/buildtemp/package
+../src/package/airsonic.sh -> ../build/buildtemp/package/airsonic.sh
+../src/package/passgen -> ../build/buildtemp/package/passgen
+../src/package/config -> ../build/buildtemp/package/config
+../src/package/images -> ../build/buildtemp/package/images
+../src/package/images/airsonic-24.png -> ../build/buildtemp/package/images/airsonic-24.png
+../src/package/images/airsonic-32.png -> ../build/buildtemp/package/images/airsonic-32.png
+../src/package/images/airsonic-48.png -> ../build/buildtemp/package/images/airsonic-48.png
+../src/package/images/airsonic-72.png -> ../build/buildtemp/package/images/airsonic-72.png
+../src/package/images/airsonic-16.png -> ../build/buildtemp/package/images/airsonic-16.png
+../src/package/airsonic.war -> ../build/buildtemp/package/airsonic.war
+../src/package/README.TXT -> ../build/buildtemp/package/README.TXT
+../src/package/version.txt -> ../build/buildtemp/package/version.txt
+../src/scripts -> ../build/buildtemp/scripts
+../src/scripts/installer.sh -> ../build/buildtemp/scripts/installer.sh
+../src/scripts/postupgrade -> ../build/buildtemp/scripts/postupgrade
+../src/scripts/preupgrade -> ../build/buildtemp/scripts/preupgrade
+../src/scripts/postuninst -> ../build/buildtemp/scripts/postuninst
+../src/scripts/preinst -> ../build/buildtemp/scripts/preinst
+../src/scripts/postinst -> ../build/buildtemp/scripts/postinst
+../src/scripts/preuninst -> ../build/buildtemp/scripts/preuninst
+../src/scripts/start-stop-status -> ../build/buildtemp/scripts/start-stop-status
+a README.TXT
+a airsonic.sh
+a airsonic.war
+a config
+a images
+a images/airsonic-24.png
+a images/airsonic-32.png
+a images/airsonic-48.png
+a images/airsonic-72.png
+a images/airsonic-16.png
+a passgen
+a version.txt
+a CHANGELOG
+a INFO
+a PACKAGE_ICON.PNG
+a PACKAGE_ICON_120.PNG
+a PACKAGE_ICON_256.PNG
+a airsonic.sh
+a package.tgz
+a scripts
+a scripts/installer.sh
+a scripts/postupgrade
+a scripts/preupgrade
+a scripts/postuninst
+a scripts/preinst
+a scripts/postinst
+a scripts/preuninst
+a scripts/start-stop-status
+[1m[7m%[27m[1m[0m                                                                                                                                                                              [0m[27m[24m[Jghenry@Gavens-MacBook-Pro-2 scripts % [K[?2004h./build.sh[?2004l
+../src/CHANGELOG -> ../build/buildtemp/CHANGELOG
+../src/INFO -> ../build/buildtemp/INFO
+../src/PACKAGE_ICON.PNG -> ../build/buildtemp/PACKAGE_ICON.PNG
+../src/PACKAGE_ICON_120.PNG -> ../build/buildtemp/PACKAGE_ICON_120.PNG
+../src/PACKAGE_ICON_256.PNG -> ../build/buildtemp/PACKAGE_ICON_256.PNG
+../src/airsonic.sh -> ../build/buildtemp/airsonic.sh
+../src/package -> ../build/buildtemp/package
+../src/package/airsonic.sh -> ../build/buildtemp/package/airsonic.sh
+../src/package/passgen -> ../build/buildtemp/package/passgen
+../src/package/config -> ../build/buildtemp/package/config
+../src/package/images -> ../build/buildtemp/package/images
+../src/package/images/airsonic-24.png -> ../build/buildtemp/package/images/airsonic-24.png
+../src/package/images/airsonic-32.png -> ../build/buildtemp/package/images/airsonic-32.png
+../src/package/images/airsonic-48.png -> ../build/buildtemp/package/images/airsonic-48.png
+../src/package/images/airsonic-72.png -> ../build/buildtemp/package/images/airsonic-72.png
+../src/package/images/airsonic-16.png -> ../build/buildtemp/package/images/airsonic-16.png
+../src/package/airsonic.war -> ../build/buildtemp/package/airsonic.war
+../src/package/README.TXT -> ../build/buildtemp/package/README.TXT
+../src/package/version.txt -> ../build/buildtemp/package/version.txt
+../src/scripts -> ../build/buildtemp/scripts
+../src/scripts/installer.sh -> ../build/buildtemp/scripts/installer.sh
+../src/scripts/postupgrade -> ../build/buildtemp/scripts/postupgrade
+../src/scripts/preupgrade -> ../build/buildtemp/scripts/preupgrade
+../src/scripts/postuninst -> ../build/buildtemp/scripts/postuninst
+../src/scripts/preinst -> ../build/buildtemp/scripts/preinst
+../src/scripts/postinst -> ../build/buildtemp/scripts/postinst
+../src/scripts/preuninst -> ../build/buildtemp/scripts/preuninst
+../src/scripts/start-stop-status -> ../build/buildtemp/scripts/start-stop-status
+a README.TXT
+a airsonic.sh
+a airsonic.war
+a config
+a images
+a images/airsonic-24.png
+a images/airsonic-32.png
+a images/airsonic-48.png
+a images/airsonic-72.png
+a images/airsonic-16.png
+a passgen
+a version.txt
+a CHANGELOG
+a INFO
+a PACKAGE_ICON.PNG
+a PACKAGE_ICON_120.PNG
+a PACKAGE_ICON_256.PNG
+a airsonic.sh
+a package.tgz
+a scripts
+a scripts/installer.sh
+a scripts/postupgrade
+a scripts/preupgrade
+a scripts/postuninst
+a scripts/preinst
+a scripts/postinst
+a scripts/preuninst
+a scripts/start-stop-status
+[1m[7m%[27m[1m[0m                                                                                                                                                                              [0m[27m[24m[Jghenry@Gavens-MacBook-Pro-2 scripts % [K[?2004h./build.sh[?2004l
+../src/CHANGELOG -> ../build/buildtemp/CHANGELOG
+../src/INFO -> ../build/buildtemp/INFO
+../src/PACKAGE_ICON.PNG -> ../build/buildtemp/PACKAGE_ICON.PNG
+../src/PACKAGE_ICON_120.PNG -> ../build/buildtemp/PACKAGE_ICON_120.PNG
+../src/PACKAGE_ICON_256.PNG -> ../build/buildtemp/PACKAGE_ICON_256.PNG
+../src/airsonic.sh -> ../build/buildtemp/airsonic.sh
+../src/package -> ../build/buildtemp/package
+../src/package/airsonic.sh -> ../build/buildtemp/package/airsonic.sh
+../src/package/passgen -> ../build/buildtemp/package/passgen
+../src/package/config -> ../build/buildtemp/package/config
+../src/package/images -> ../build/buildtemp/package/images
+../src/package/images/airsonic-24.png -> ../build/buildtemp/package/images/airsonic-24.png
+../src/package/images/airsonic-32.png -> ../build/buildtemp/package/images/airsonic-32.png
+../src/package/images/airsonic-48.png -> ../build/buildtemp/package/images/airsonic-48.png
+../src/package/images/airsonic-72.png -> ../build/buildtemp/package/images/airsonic-72.png
+../src/package/images/airsonic-16.png -> ../build/buildtemp/package/images/airsonic-16.png
+../src/package/airsonic.war -> ../build/buildtemp/package/airsonic.war
+../src/package/README.TXT -> ../build/buildtemp/package/README.TXT
+../src/package/version.txt -> ../build/buildtemp/package/version.txt
+../src/scripts -> ../build/buildtemp/scripts
+../src/scripts/installer.sh -> ../build/buildtemp/scripts/installer.sh
+../src/scripts/postupgrade -> ../build/buildtemp/scripts/postupgrade
+../src/scripts/preupgrade -> ../build/buildtemp/scripts/preupgrade
+../src/scripts/postuninst -> ../build/buildtemp/scripts/postuninst
+../src/scripts/preinst -> ../build/buildtemp/scripts/preinst
+../src/scripts/postinst -> ../build/buildtemp/scripts/postinst
+../src/scripts/preuninst -> ../build/buildtemp/scripts/preuninst
+../src/scripts/start-stop-status -> ../build/buildtemp/scripts/start-stop-status
+a README.TXT
+a airsonic.sh
+a airsonic.war
+a config
+a images
+a images/airsonic-24.png
+a images/airsonic-32.png
+a images/airsonic-48.png
+a images/airsonic-72.png
+a images/airsonic-16.png
+a passgen
+a version.txt
+a CHANGELOG
+a INFO
+a PACKAGE_ICON.PNG
+a PACKAGE_ICON_120.PNG
+a PACKAGE_ICON_256.PNG
+a airsonic.sh
+a package.tgz
+a scripts
+a scripts/installer.sh
+a scripts/postupgrade
+a scripts/preupgrade
+a scripts/postuninst
+a scripts/preinst
+a scripts/postinst
+a scripts/preuninst
+a scripts/start-stop-status
+[1m[7m%[27m[1m[0m                                                                                                                                                                              [0m[27m[24m[Jghenry@Gavens-MacBook-Pro-2 scripts % [K[?2004h./build.sh[?2004l
+../src/CHANGELOG -> ../build/buildtemp/CHANGELOG
+../src/INFO -> ../build/buildtemp/INFO
+../src/PACKAGE_ICON.PNG -> ../build/buildtemp/PACKAGE_ICON.PNG
+../src/PACKAGE_ICON_120.PNG -> ../build/buildtemp/PACKAGE_ICON_120.PNG
+../src/PACKAGE_ICON_256.PNG -> ../build/buildtemp/PACKAGE_ICON_256.PNG
+../src/airsonic.sh -> ../build/buildtemp/airsonic.sh
+../src/package -> ../build/buildtemp/package
+../src/package/airsonic.sh -> ../build/buildtemp/package/airsonic.sh
+../src/package/passgen -> ../build/buildtemp/package/passgen
+../src/package/config -> ../build/buildtemp/package/config
+../src/package/images -> ../build/buildtemp/package/images
+../src/package/images/airsonic-24.png -> ../build/buildtemp/package/images/airsonic-24.png
+../src/package/images/airsonic-32.png -> ../build/buildtemp/package/images/airsonic-32.png
+../src/package/images/airsonic-48.png -> ../build/buildtemp/package/images/airsonic-48.png
+../src/package/images/airsonic-72.png -> ../build/buildtemp/package/images/airsonic-72.png
+../src/package/images/airsonic-16.png -> ../build/buildtemp/package/images/airsonic-16.png
+../src/package/airsonic.war -> ../build/buildtemp/package/airsonic.war
+../src/package/README.TXT -> ../build/buildtemp/package/README.TXT
+../src/package/version.txt -> ../build/buildtemp/package/version.txt
+../src/scripts -> ../build/buildtemp/scripts
+../src/scripts/installer.sh -> ../build/buildtemp/scripts/installer.sh
+../src/scripts/postupgrade -> ../build/buildtemp/scripts/postupgrade
+../src/scripts/preupgrade -> ../build/buildtemp/scripts/preupgrade
+../src/scripts/postuninst -> ../build/buildtemp/scripts/postuninst
+../src/scripts/preinst -> ../build/buildtemp/scripts/preinst
+../src/scripts/postinst -> ../build/buildtemp/scripts/postinst
+../src/scripts/preuninst -> ../build/buildtemp/scripts/preuninst
+../src/scripts/start-stop-status -> ../build/buildtemp/scripts/start-stop-status
+a README.TXT
+a airsonic.sh
+a airsonic.war
+a config
+a images
+a images/airsonic-24.png
+a images/airsonic-32.png
+a images/airsonic-48.png
+a images/airsonic-72.png
+a images/airsonic-16.png
+a passgen
+a version.txt
+a CHANGELOG
+a INFO
+a PACKAGE_ICON.PNG
+a PACKAGE_ICON_120.PNG
+a PACKAGE_ICON_256.PNG
+a airsonic.sh
+a package.tgz
+a scripts
+a scripts/installer.sh
+a scripts/postupgrade
+a scripts/preupgrade
+a scripts/postuninst
+a scripts/preinst
+a scripts/postinst
+a scripts/preuninst
+a scripts/start-stop-status
+[1m[7m%[27m[1m[0m                                                                                                                                                                              [0m[27m[24m[Jghenry@Gavens-MacBook-Pro-2 scripts % [K[?2004h./build.sh[?2004l
+../src/CHANGELOG -> ../build/buildtemp/CHANGELOG
+../src/INFO -> ../build/buildtemp/INFO
+../src/PACKAGE_ICON.PNG -> ../build/buildtemp/PACKAGE_ICON.PNG
+../src/PACKAGE_ICON_120.PNG -> ../build/buildtemp/PACKAGE_ICON_120.PNG
+../src/PACKAGE_ICON_256.PNG -> ../build/buildtemp/PACKAGE_ICON_256.PNG
+../src/airsonic.sh -> ../build/buildtemp/airsonic.sh
+../src/package -> ../build/buildtemp/package
+../src/package/airsonic.sh -> ../build/buildtemp/package/airsonic.sh
+../src/package/config2 -> ../build/buildtemp/package/config2
+../src/package/passgen -> ../build/buildtemp/package/passgen
+../src/package/images -> ../build/buildtemp/package/images
+../src/package/images/airsonic-24.png -> ../build/buildtemp/package/images/airsonic-24.png
+../src/package/images/airsonic-32.png -> ../build/buildtemp/package/images/airsonic-32.png
+../src/package/images/airsonic-48.png -> ../build/buildtemp/package/images/airsonic-48.png
+../src/package/images/airsonic-72.png -> ../build/buildtemp/package/images/airsonic-72.png
+../src/package/images/airsonic-16.png -> ../build/buildtemp/package/images/airsonic-16.png
+../src/package/airsonic.war -> ../build/buildtemp/package/airsonic.war
+../src/package/README.TXT -> ../build/buildtemp/package/README.TXT
+../src/package/version.txt -> ../build/buildtemp/package/version.txt
+../src/scripts -> ../build/buildtemp/scripts
+../src/scripts/installer.sh -> ../build/buildtemp/scripts/installer.sh
+../src/scripts/postupgrade -> ../build/buildtemp/scripts/postupgrade
+../src/scripts/preupgrade -> ../build/buildtemp/scripts/preupgrade
+../src/scripts/postuninst -> ../build/buildtemp/scripts/postuninst
+../src/scripts/preinst -> ../build/buildtemp/scripts/preinst
+../src/scripts/postinst -> ../build/buildtemp/scripts/postinst
+../src/scripts/preuninst -> ../build/buildtemp/scripts/preuninst
+../src/scripts/start-stop-status -> ../build/buildtemp/scripts/start-stop-status
+a README.TXT
+a airsonic.sh
+a airsonic.war
+a config2
+a images
+a images/airsonic-24.png
+a images/airsonic-32.png
+a images/airsonic-48.png
+a images/airsonic-72.png
+a images/airsonic-16.png
+a passgen
+a version.txt
+a CHANGELOG
+a INFO
+a PACKAGE_ICON.PNG
+a PACKAGE_ICON_120.PNG
+a PACKAGE_ICON_256.PNG
+a airsonic.sh
+a package.tgz
+a scripts
+a scripts/installer.sh
+a scripts/postupgrade
+a scripts/preupgrade
+a scripts/postuninst
+a scripts/preinst
+a scripts/postinst
+a scripts/preuninst
+a scripts/start-stop-status
+[1m[7m%[27m[1m[0m                                                                                                                                                                              [0m[27m[24m[Jghenry@Gavens-MacBook-Pro-2 scripts % [K[?2004h

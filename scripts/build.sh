@@ -5,6 +5,6 @@ tar -cvzf package.tgz *
 cp package.tgz ../
 cd ..
 rm -rf ./package
-tar -cvf ../airsonic1.0.1062.spk *
+tar -cvf ../airsonic1.0.1101.spk *
 cd ../../scripts
 rm -rf ../build/buildtemp

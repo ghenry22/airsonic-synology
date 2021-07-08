@@ -1,5 +1,5 @@
 package="airsonic"
-version="1.0.1062"
+version="1.0.1101"
 description="airsonic is a web-based media streamer and jukebox server. You can control it remotely with its web interface or dedicated applications. Check out https://substreamerapp.com"
 maintainer="airsonic is developed at airsonic.github.io, Synology package is maintained at https://github.com/ghenry22/airsonic-synology"
 distributor="Gaven Henry"

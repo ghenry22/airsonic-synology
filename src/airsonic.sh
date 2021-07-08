@@ -163,10 +163,10 @@ done
 
 # Use JAVA_HOME if set, otherwise assume java is in the path.
 JAVA=java
-if [ -e "${JAVA_HOME}" ]
-    then
-    JAVA=${JAVA_HOME}/bin/java
-fi
+#if [ -e "${JAVA_HOME}" ]
+#    then
+#    JAVA=${JAVA_HOME}/bin/java
+#fi
 
 # Create airsonic home directory.
 mkdir -p ${AIRSONIC_HOME}
@@ -180,10 +180,10 @@ fi
 
 ${JAVA} -Xms${AIRSONIC_INIT_MEMORY}m -Xmx${AIRSONIC_MAX_MEMORY}m \
   -Dairsonic.home=${AIRSONIC_HOME} \
-  -Dairsonic.host=${AIRSONIC_HOST} \
-  -Dairsonic.port=${AIRSONIC_PORT} \
+  -Dserver.address=${AIRSONIC_HOST} \
+  -Dserver.port=${AIRSONIC_PORT} \
   -Dairsonic.httpsPort=${AIRSONIC_HTTPS_PORT} \
-  -Dairsonic.contextPath=${AIRSONIC_CONTEXT_PATH} \
+  -Dserver.servlet.context-path=${AIRSONIC_CONTEXT_PATH} \
   -Dairsonic.defaultMusicFolder=${AIRSONIC_DEFAULT_MUSIC_FOLDER} \
   -Dairsonic.defaultUploadFolder=${AIRSONIC_DEFAULT_UPLOAD_FOLDER} \
   -Dairsonic.defaultPodcastFolder=${AIRSONIC_DEFAULT_PODCAST_FOLDER} \
